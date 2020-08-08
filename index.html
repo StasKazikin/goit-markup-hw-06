@@ -56,8 +56,19 @@
       <!-- HERO секция -->
       <section class="hero">
         <h1 class="hero-title">Эффективные решения для вашего бизнеса</h1>
-        <button class="button" type="button">Заказать услугу</button>
+        <button class="button" type="button" data-modal-open>
+          Заказать услугу
+        </button>
       </section>
+
+      <!-- Modal Window -->
+
+      <div class="backdrop is-hidden" data-modal>
+        <div class="modal">
+          <button class="close-button" type="button" data-modal-close>X</button>
+          <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+        </div>
+      </div>
 
       <!-- секция О нас -->
       <section class="about-us">
