@@ -67,6 +67,21 @@
         <div class="modal">
           <button class="close-button" type="button" data-modal-close>X</button>
           <h2 class="modal-title">Оставьте свои данные, мы вам перезвоним</h2>
+          <form action="" class="modal-subscribe-form">
+            <input type="text" name="user-name" id="name" placeholder=" " />
+            <label for="name">Имя</label>
+            <input type="tel" name="user-telephone" id="tel" placeholder=" " />
+            <label for="tel">Телефон</label>
+            <input type="email" name="user-email" id="email" placeholder=" " />
+            <label for="email">Почта</label>
+            <textarea name="comment" id="comment" placeholder=" "></textarea>
+            <input type="checkbox" id="policy" value="accept" />
+            <label for="policy" class="policy">
+              Соглашаюсь с рассылкой и принимаю
+              <a class="policy-link" href="">Условия договора</a>
+            </label>
+            <button class="button" type="submit">Отправить</button>
+          </form>
         </div>
       </div>
 
@@ -526,7 +541,7 @@
               name="email"
               placeholder="E-mail"
             />
-            <button class="button" type="subscribe">
+            <button class="button" type="submit">
               Подписаться
               <svg class="send-icon" width="24" height="24">
                 <use href="./images/sprite.svg#send-icon"></use>
