@@ -766,8 +766,11 @@ img {
   fill: var(--accent-color);
 }
 
-.modal .button {
+.modal-form .button {
+  display: block;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .modal-title {
@@ -820,7 +823,7 @@ img {
 }
 
 .form-textarea {
-  /* height: 120px; */
+  height: 120px;
   padding: 12px 16px;
 }
 
@@ -828,7 +831,7 @@ img {
 .form-input:focus,
 .form-textarea:hover,
 .form-textarea:focus {
-  border: 1px solid #2196f3;
+  border: 1px solid var(--accent-color);
 }
 
 .form-label {
