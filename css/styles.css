@@ -180,7 +180,11 @@ img {
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
-  background-image: linear-gradient(rgba(47, 48, 58, 0.8), rgba(47, 48, 58, 0.8)), url(../images/hero/hero-img.jpg);
+  background-image: linear-gradient(
+      rgba(47, 48, 58, 0.8),
+      rgba(47, 48, 58, 0.8)
+    ),
+    url(../images/hero/hero-img.jpg);
   /* если не отрисует bg image */
   background-color: rgba(47, 48, 58, 0.8);
 }
@@ -200,13 +204,13 @@ img {
 }
 
 .button {
-  display: inline-block;
+  width: 200px;
   color: var(--white-color);
   background-color: var(--accent-color);
   font-weight: 700;
   font-size: 16px;
-  line-height: 1.87;
-  letter-spacing: 0.06em;
+  line-height: 1.875;
+  letter-spacing: 0.058em;
 
   padding: 10px 32px;
 
@@ -338,7 +342,8 @@ img {
   background-color: var(--white-color);
   width: calc((100% - 3 * 30px) / 4);
   padding-bottom: 24px;
-  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 2px 1px rgba(0, 0, 0, 0.2), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 1px 3px rgba(0, 0, 0, 0.12);
   border-radius: 0px 0px 4px 4px;
 }
 
@@ -391,7 +396,8 @@ img {
 
   fill: var(--primary-social-links-color);
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-link:hover,
@@ -438,7 +444,8 @@ img {
   border-radius: 4px;
 
   fill: var(--primary-social-links-color);
-  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients .link:hover,
@@ -452,6 +459,7 @@ img {
 .footer .container {
   display: flex;
   align-items: baseline;
+  justify-content: space-between;
   padding-top: 60px;
   padding-bottom: 60px;
 }
@@ -536,6 +544,21 @@ img {
 .send-icon {
   margin-left: 10px;
 }
+.subscribe-form {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer .email {
+  width: 358px;
+  color: var(--white-color);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-radius: 4px;
+  padding: 15px 16px;
+  margin-right: 12px;
+}
 
 /* PORTFOLIO */
 
@@ -572,7 +595,8 @@ img {
   padding-bottom: 6px;
   padding-left: 22px;
 
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1),
+    color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-portfolio:hover,
@@ -612,7 +636,8 @@ img {
 
 .portfolio-list .item:hover,
 .portfolio-list .link:focus {
-  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06), 0px 1px 1px rgba(0, 0, 0, 0.12);
+  box-shadow: 1px 4px 6px rgba(0, 0, 0, 0.16), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    0px 1px 1px rgba(0, 0, 0, 0.12);
   display: block;
   outline: none;
 }
