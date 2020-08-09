@@ -769,13 +769,6 @@ img {
   fill: var(--accent-color);
 }
 
-.modal-form .button {
-  display: block;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 .modal-title {
   font-family: Roboto;
   font-style: normal;
@@ -789,26 +782,29 @@ img {
   margin-bottom: 30px;
 }
 
-.policy,
-.policy-link {
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 1.71;
-  letter-spacing: 0.03em;
-  color: var(--secondary-text-color);
+.modal-form .button {
+  display: block;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.policy-link {
-  text-decoration-line: underline;
-  color: var(--accent-color);
-}
-
-.modal-form {
+.form-field,
+.textarea-field {
+  position: relative;
 }
 
 .form-field {
-  position: relative;
   margin-bottom: 28px;
+}
+
+.textarea-field {
+  margin-bottom: 20px;
+}
+
+.policy-field {
+  margin-bottom: 30px;
+  resize: none;
 }
 
 .form-input,
@@ -819,8 +815,6 @@ img {
   border-radius: 4px;
 
   margin: 0;
-  padding: 0;
-
   padding: 12px 42px;
   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -828,6 +822,7 @@ img {
 .form-textarea {
   height: 120px;
   padding: 12px 16px;
+  resize: none;
 }
 .input-icon {
   position: absolute;
@@ -890,4 +885,51 @@ img {
 .form-textarea:not(:placeholder-shown) + .textarea-label {
   color: var(--accent-color);
   transform: translateY(-30px);
+}
+
+.policy,
+.policy-link {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+  color: var(--secondary-text-color);
+}
+
+.policy-link {
+  text-decoration-line: underline;
+  color: var(--accent-color);
+}
+
+.check-icon {
+  display: inline-block;
+  width: 16px;
+  height: 15px;
+
+  border: 2px solid var(--primary-text-color);
+  border-radius: 4px;
+}
+
+.checkbox:checked + .check-icon {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+  background-image: url('../images/svg/check.svg');
+  background-size: contain;
+  background-origin: border-box;
+}
+
+.checkbox {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
 }
