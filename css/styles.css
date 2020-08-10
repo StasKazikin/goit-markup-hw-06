@@ -839,20 +839,6 @@ img {
   fill: var(--accent-color);
 }
 
-.form-input:hover ~ .form-label,
-.form-input:focus ~ .form-label,
-.form-input:not(:placeholder-shown) ~ .form-label {
-  color: var(--accent-color);
-  transform: translate(-26px, -40px);
-}
-
-.form-input:focus,
-.form-textarea:focus,
-.form-input:not(:placeholder-shown),
-.form-textarea:not(:placeholder-shown) {
-  border: 1px solid var(--accent-color);
-}
-
 .form-label,
 .textarea-label {
   position: absolute;
@@ -877,10 +863,28 @@ img {
   left: 16px;
 }
 
+.form-input:focus ~ .form-label,
+.form-input:not(:placeholder-shown) ~ .form-label {
+  color: var(--accent-color);
+  transform: translate(-26px, -40px);
+  font-size: 12px;
+  line-height: 1.17;
+}
+
+.form-input:focus,
+.form-textarea:focus,
+.form-input:not(:placeholder-shown),
+.form-textarea:not(:placeholder-shown) {
+  border: 1px solid var(--accent-color);
+  outline: none;
+}
+
 .form-textarea:focus + .textarea-label,
 .form-textarea:not(:placeholder-shown) + .textarea-label {
   color: var(--accent-color);
   transform: translateY(-30px);
+  font-size: 12px;
+  line-height: 1.17;
 }
 
 .policy,
